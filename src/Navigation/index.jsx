@@ -1,12 +1,12 @@
 import { NavigationContainer } from '@react-navigation/native';
 
-import MainNavigator from './main';
+import TabNavigator from './tabs';
 
 const Navigator = () => {
   // Dentro del Navigation container Puedo anidar varios navigators.
   return (
     <NavigationContainer>
-      <MainNavigator />
+      <TabNavigator />
     </NavigationContainer>
   );
 };

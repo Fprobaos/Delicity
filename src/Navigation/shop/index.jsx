@@ -5,7 +5,7 @@ import { Categories, ProductDetail, Products } from '../../screens';
 
 const Stack = createNativeStackNavigator();
 
-const MainNavigator = () => {
+const ShopNavigator = () => {
   return (
     //   Si no pongo el initial Route Name, me pone la primera screen que tengo en la lista
     <Stack.Navigator
@@ -41,4 +41,4 @@ const MainNavigator = () => {
   );
 };
 
-export default MainNavigator;
+export default ShopNavigator;
