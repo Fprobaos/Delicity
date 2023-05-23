@@ -1,16 +1,10 @@
-import React from 'react'
-import {View, Text} from 'react-native'
-import { styles } from './styles';
+import { DetailProduct } from '../../Components';
+import { PRODUCTS } from '../../Constants';
 
+const ProductDetail = ({ route }) => {
+  const { productID } = route.params;
 
-
-const ProductDetail = () => {
-  return (
-    <View style={styles.container}>
-        <Text>
-        ProductDetail
-        </Text>
-    </View>
-)}
-
+  const product = PRODUCTS.find((product) => product.id === productID);
+  return <DetailProduct product={product} />;
+};
 export default ProductDetail;
