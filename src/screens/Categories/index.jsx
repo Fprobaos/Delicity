@@ -1,5 +1,4 @@
-import React from 'react';
-import { View, Text, Button, FlatList } from 'react-native';
+import { View, FlatList } from 'react-native';
 
 import { styles } from './styles';
 import { CategotyItem } from '../../Components';

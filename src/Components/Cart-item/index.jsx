@@ -1,0 +1,28 @@
+import Ionicons from '@expo/vector-icons/Ionicons';
+import { Text, TouchableOpacity, View } from 'react-native';
+
+import { styles } from './styles';
+import { theme } from '../../Constants';
+
+const CartItem = ({ item, onRemove }) => {
+  return (
+    <TouchableOpacity onPress={() => null}>
+      <View style={styles.container}>
+        <View style={styles.headerContainer}>
+          <Text style={styles.header}>{item.name}</Text>
+        </View>
+        <View style={styles.bodyContainer}>
+          <View style={styles.content}>
+            <Text style={styles.quantity}>X {item.quantity}</Text>
+            <Text style={styles.price}>$ {item.price}</Text>
+          </View>
+          <TouchableOpacity onPress={() => onRemove(item.id)}>
+            <Ionicons name="trash" size={20} color={theme.colors.red} />
+          </TouchableOpacity>
+        </View>
+      </View>
+    </TouchableOpacity>
+  );
+};
+
+export default CartItem;
