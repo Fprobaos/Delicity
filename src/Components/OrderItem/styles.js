@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
     borderWidth: 2,
     marginHorizontal: 10,
     marginTop: 10,
-    backgroundColor: theme.colors.tertiary,
+    backgroundColor: theme.colors.white,
   },
   headerContainer: {
     paddingHorizontal: 20,

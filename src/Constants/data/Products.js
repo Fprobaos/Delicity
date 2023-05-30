@@ -5,7 +5,6 @@ export const PRODUCTS = [
     id: 1,
     category: 1,
     name: 'Churros',
-
     price: '20',
   },
   {
@@ -87,7 +86,6 @@ export const PRODUCTS = [
     id: 14,
     name: 'Pan Impuro',
     category: 98,
-
     price: '20',
     detail: 'Pan hecho a base de harinas impuras',
   },

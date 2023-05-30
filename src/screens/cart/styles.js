@@ -25,6 +25,21 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 10,
     backgroundColor: theme.colors.background,
   },
+
+  buttonDisabled: {
+    borderWidth: 2,
+    borderColor: theme.colors.primary,
+    borderRadius: 5,
+    shadowColor: 'black',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginHorizontal: 10,
+    marginVertical: 10,
+    flexDirection: 'row',
+    paddingVertical: 10,
+    paddingHorizontal: 10,
+    backgroundColor: theme.colors.primary,
+  },
   buttonConfirm: {
     color: theme.colors.text,
     fontFamily: 'OpenSans-Bold',

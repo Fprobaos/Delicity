@@ -3,3 +3,4 @@ export * from './data/Products';
 export * from './themes/colors';
 export * from './data/CartList';
 export * from './data/OrderList';
+export * from './firebase/index';
