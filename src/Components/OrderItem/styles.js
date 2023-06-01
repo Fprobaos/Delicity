@@ -11,16 +11,16 @@ export const styles = StyleSheet.create({
     borderWidth: 2,
     marginHorizontal: 10,
     marginTop: 10,
-    backgroundColor: theme.colors.white,
+    backgroundColor: theme.colors.black,
   },
-  headerContainer: {
-    paddingHorizontal: 20,
-    paddingVertical: 10,
-  },
+
   date: {
     color: theme.colors.text,
+    textAlign: 'center',
     fontFamily: 'OpenSans-Medium',
     fontSize: 16,
+    paddingHorizontal: 10,
+    paddingVertical: 10,
   },
   bodyContainer: {
     justifyContent: 'space-between',

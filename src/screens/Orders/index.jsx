@@ -1,35 +1,38 @@
-import React from 'react';
-import { FlatList, Text, TouchableOpacity, View } from 'react-native';
+import { useFocusEffect } from '@react-navigation/native';
+import React, { useCallback, useEffect } from 'react';
+import { FlatList, View } from 'react-native';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { styles } from './styles';
-import { CartItem, OrderItem } from '../../Components';
-import { CartList } from '../../Constants';
+import { OrderItem } from '../../Components';
+import { deleteOrders, getOrders } from '../../store/actions/orders.actions';
 
-const Cart = ({ navigation }) => {
+const Orders = () => {
+  const orders = useSelector((state) => state.orders.data);
+  const dispatch = useDispatch();
   const onRemove = (id) => {
-    console.warn('remover producto');
+    dispatch(deleteOrders(id));
   };
-  const TOTAL = 2000;
+
   const renderItem = ({ item }) => <OrderItem item={item} onRemove={onRemove} />;
   const keyExtractor = (item) => item.id.toString();
+
+  useFocusEffect(
+    useCallback(() => {
+      dispatch(getOrders());
+    }, [dispatch])
+  );
+
   return (
     <View style={styles.container}>
       <FlatList
-        data={CartList}
+        data={orders}
         renderItem={renderItem}
         keyExtractor={keyExtractor}
         style={styles.listContainer}
       />
-
-      <TouchableOpacity style={styles.touchableContainer} onPress={() => null}>
-        <View style={styles.totalPurchaseContainer}>
-          <Text style={styles.totaltext}>Total: </Text>
-          <Text style={styles.totalPrice}>{TOTAL} </Text>
-        </View>
-        <Text style={styles.buttonConfirm}> Confirm Order</Text>
-      </TouchableOpacity>
     </View>
   );
 };
 
-export default Cart;
+export default Orders;

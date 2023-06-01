@@ -12,7 +12,7 @@ const OrederItem = ({ item, onRemove }) => {
   return (
     <View style={styles.container}>
       <View styles={styles.headerContainer}>
-        <Text styles={styles.date}>{formatDate(item.date)}</Text>
+        <Text style={styles.date}>{formatDate(item.date)}</Text>
       </View>
       <View style={styles.bodyContainer}>
         <View style={styles.body}>
