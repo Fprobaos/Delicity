@@ -9,11 +9,14 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: theme.colors.background,
   },
+  brandtitle: {
+    color: theme.colors.text,
+    fontFamily: 'OpenSans-Bold',
+    marginBottom: 30,
+    fontSize: 42,
+  },
 
   loginContainer: {
-    borderColor: theme.colors.text,
-    borderWidth: 10,
-    borderRadius: 10,
     height: 400,
     width: '80%',
     maxWidth: 400,
@@ -31,6 +34,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     marginVertical: 5,
   },
+
   link: {
     marginVertical: 10,
   },

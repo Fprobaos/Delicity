@@ -1,6 +1,6 @@
 import { theme } from '../themes/colors';
 
-export const PRODUCTS = [
+export const TEAMS = [
   {
     id: 1,
     category: 1,

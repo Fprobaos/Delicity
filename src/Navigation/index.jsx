@@ -8,7 +8,11 @@ const Navigator = () => {
   const userID = useSelector((state) => state.authentication.userID);
   // Dentro del Navigation container Puedo anidar varios navigators.
 
-  return <NavigationContainer>{userID ? <TabNavigator /> : <AuthNavigator />}</NavigationContainer>;
+  return (
+    <NavigationContainer>
+      <TabNavigator />
+    </NavigationContainer>
+  );
 };
 
 export default Navigator;

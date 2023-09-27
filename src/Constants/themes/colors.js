@@ -5,9 +5,8 @@ export const theme = {
     tertiary: '#8380B6',
     red: '#FD151B',
     confirm: '#0FF66',
-    background: '#01295F',
-
-    text: '#F2F4FF',
+    background: '#3A435E',
+    text: '#BFEDEF',
     white: '#F2F4FF',
     black: '#100B00',
   },

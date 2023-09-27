@@ -61,6 +61,9 @@ const Auth = () => {
   return (
     <View style={styles.container}>
       <View style={styles.loginContainer}>
+        <View>
+          <Text style={styles.brandtitle}>LOGO</Text>
+        </View>
         <Text style={styles.title}>{title}</Text>
 
         <Input

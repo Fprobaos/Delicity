@@ -1,10 +1,10 @@
-import { CATEGORIES } from '../../Constants';
+import { LEAGUES } from '../../Constants';
 import { categoriesTypes } from '../types';
 
 const { SELECT_CATEGORY } = categoriesTypes;
 
 const initialState = {
-  data: CATEGORIES,
+  data: LEAGUES,
   selected: null,
 };
 

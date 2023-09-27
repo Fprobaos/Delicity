@@ -1,10 +1,10 @@
-import { PRODUCTS } from '../../Constants';
+import { TEAMS } from '../../Constants';
 import { productTypes } from '../types';
 
 const { SELECT_PRODUCT, FILTER_PRODUCTS } = productTypes;
 
 const initialState = {
-  data: PRODUCTS,
+  data: TEAMS,
   selected: null,
   filteredProducts: [],
 };

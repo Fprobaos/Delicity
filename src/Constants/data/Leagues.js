@@ -1,24 +1,24 @@
 import { theme } from '../themes/colors';
 
-export const CATEGORIES = [
+export const LEAGUES = [
   {
     id: 97,
-    name: 'Harinas Puras',
+    name: 'Liga 1',
     color: '#A0A7A0',
   },
   {
     id: 98,
-    name: 'Harinas Impuras',
+    name: 'Liga 2',
     color: '#3D2A00',
   },
   {
     id: 1,
-    name: 'Facturas',
+    name: 'Liga 3',
     color: '#7A5400',
   },
   {
     id: 99,
-    name: 'Harinas Integrales',
+    name: 'Liga 4',
     color: theme.colors.primary,
   },
 ];

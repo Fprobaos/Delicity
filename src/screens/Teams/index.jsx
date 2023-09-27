@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
-import { SafeAreaView, FlatList } from 'react-native';
+import { SafeAreaView, FlatList, Text } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { styles } from './styles';
 import ProductList from '../../Components/ProductItem';
 import { filterProducts, selectProduct } from '../../store/actions/products.action';
 
-const Products = ({ navigation, route }) => {
+const Teams = ({ navigation, route }) => {
   const { color } = route.params;
   const dispatch = useDispatch();
   const category = useSelector((state) => state.categorieslist.selected);
@@ -34,4 +34,4 @@ const Products = ({ navigation, route }) => {
   );
 };
 
-export default Products;
+export default Teams;
