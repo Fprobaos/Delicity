@@ -3,6 +3,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { useSelector } from 'react-redux';
 
 import { theme } from '../../Constants';
+import EventsNavigator from '../Events';
+import FixtureNavigator from '../Fixture';
+import GoalsNavigator from '../GoalsNavigator';
 import OrdersNavigator from '../Orders';
 import CartNavigator from '../cart';
 import ShopNavigator from '../shop';
@@ -27,31 +30,44 @@ const TabNavigator = () => {
         name="ShopTab"
         component={ShopNavigator}
         options={{
-          tabBarLabel: 'Shop',
+          tabBarLabel: 'Campeonato',
+          tabBarActiveTintColor: theme.colors.text,
           tabBarIcon: ({ focused, color, size }) => (
-            <Ionicons name={focused ? 'home' : 'home-outline'} size={24} color="white" />
+            <Ionicons name={focused ? 'trophy' : 'trophy-outline'} size={24} color="white" />
           ),
         }}
       />
       <BottomTab.Screen
-        name="OrdersTab"
-        component={OrdersNavigator}
+        name="Goleadores"
+        component={GoalsNavigator}
         options={{
-          tabBarLabel: 'Orders',
+          tabBarLabel: 'Goleadores',
+          tabBarActiveTintColor: theme.colors.text,
+          tabBarIcon: ({ focused, color, size }) => (
+            <Ionicons name={focused ? 'football' : 'football-outline'} size={24} color="white" />
+          ),
+        }}
+      />
+      <BottomTab.Screen
+        name="FixtureTab"
+        component={FixtureNavigator}
+        options={{
+          tabBarLabel: 'Fixture',
+          tabBarActiveTintColor: theme.colors.text,
+          tabBarIcon: ({ focused, color, size }) => (
+            <Ionicons name={focused ? 'podium' : 'podium-outline'} size={24} color="white" />
+          ),
+        }}
+      />
+      <BottomTab.Screen
+        name="Noticias y Eventos"
+        component={EventsNavigator}
+        options={{
+          tabBarLabel: 'Noticias y Eventos',
+          tabBarActiveTintColor: theme.colors.text,
           tabBarIcon: ({ focused, color, size }) => (
             <Ionicons name={focused ? 'newspaper' : 'newspaper-outline'} size={24} color="white" />
           ),
-        }}
-      />
-      <BottomTab.Screen
-        name="CartTab"
-        component={CartNavigator}
-        options={{
-          tabBarLabel: 'Cart',
-          tabBarIcon: ({ focused, color, size }) => (
-            <Ionicons name={focused ? 'cart' : 'cart-outline'} size={24} color="white" />
-          ),
-          tabBarBadge: cart.length,
           tabBarBadgeStyle: isCartEmpty
             ? { backgroundColor: theme.colors.primary }
             : { backgroundColor: theme.colors.red },

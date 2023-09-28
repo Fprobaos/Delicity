@@ -5,10 +5,10 @@ import { Cart, Orders } from '../../screens';
 
 const Stack = createNativeStackNavigator();
 
-const CartNavigator = () => {
+const EventsNavigator = () => {
   return (
     <Stack.Navigator
-      initialRouteName="Cart"
+      initialRouteName="Events"
       screenOptions={{
         headerStyle: {
           backgroundColor: theme.colors.background,
@@ -19,9 +19,9 @@ const CartNavigator = () => {
         },
         headerTitleAlign: 'center',
       }}>
-      <Stack.Screen name="Cart" component={Cart} />
+      <Stack.Screen name="Noticias y Eventos" component={Cart} />
     </Stack.Navigator>
   );
 };
 
-export default CartNavigator;
+export default EventsNavigator;

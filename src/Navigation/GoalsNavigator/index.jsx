@@ -5,10 +5,10 @@ import { Orders } from '../../screens';
 
 const Stack = createNativeStackNavigator();
 
-const OrdersNavigator = () => {
+const GoalsNavigator = () => {
   return (
     <Stack.Navigator
-      initialRouteName="Orders"
+      initialRouteName="Goleadores"
       screenOptions={{
         headerStyle: {
           backgroundColor: theme.colors.background,
@@ -19,9 +19,9 @@ const OrdersNavigator = () => {
         },
         headerTitleAlign: 'center',
       }}>
-      <Stack.Screen name="Orders" component={Orders} />
+      <Stack.Screen name="Goleadores/as del campeonato" component={Orders} />
     </Stack.Navigator>
   );
 };
 
-export default OrdersNavigator;
+export default GoalsNavigator;

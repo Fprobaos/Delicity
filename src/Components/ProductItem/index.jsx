@@ -8,8 +8,10 @@ const ProductList = ({ item, onSelected, color }) => {
       <TouchableOpacity
         style={{ ...styles.containerTouchable, backgroundColor: color }}
         onPress={() => onSelected(item)}>
+        <View style={styles.teampicturecontainer}>
+          <Text style={styles.teampicture}>{item.name}</Text>
+        </View>
         <View>
-          <Text style={styles.name}> {item.name}</Text>
           <Text style={styles.price}>Price: {item.price}</Text>
         </View>
       </TouchableOpacity>

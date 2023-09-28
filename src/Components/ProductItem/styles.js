@@ -5,7 +5,7 @@ import { theme } from '../../Constants';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    height: 180,
+    height: 80,
     borderRadius: 10,
     margin: 20,
   },
@@ -20,10 +20,10 @@ export const styles = StyleSheet.create({
     },
     shadowOpacity: 0.43,
     shadowRadius: 9.51,
-
+    flexDirection: 'row',
     elevation: 15,
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     padding: 10,
   },
   name: {
@@ -33,6 +33,9 @@ export const styles = StyleSheet.create({
   },
   price: {
     fontFamily: 'OpenSans-Bold',
+    marginBottom: 10,
     color: theme.colors.text,
   },
+  teampicture: {},
+  teampicturecontainer: {},
 });
