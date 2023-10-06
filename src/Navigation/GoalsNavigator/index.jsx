@@ -1,7 +1,7 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+import { ScoringLeaders } from '../../Components';
 import { theme } from '../../Constants';
-import { Orders } from '../../screens';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,7 +19,7 @@ const GoalsNavigator = () => {
         },
         headerTitleAlign: 'center',
       }}>
-      <Stack.Screen name="Goleadores/as del campeonato" component={Orders} />
+      <Stack.Screen name="Goleadores/as del campeonato" component={ScoringLeaders} />
     </Stack.Navigator>
   );
 };

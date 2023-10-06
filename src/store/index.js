@@ -1,20 +1,11 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
+import { configureStore } from '@reduxjs/toolkit';
 
-import {
-  categoriesReducer,
-  productsReducer,
-  cartReducer,
-  ordersReducer,
-  authReducer,
-} from './reducers';
+import authReducer from './authSlice';
 
-const mainReducer = combineReducers({
-  categorieslist: categoriesReducer,
-  products: productsReducer,
-  cart: cartReducer,
-  orders: ordersReducer,
-  authentication: authReducer,
+const store = configureStore({
+  reducer: {
+    authenticate: authReducer,
+  },
 });
 
-export default createStore(mainReducer, applyMiddleware(thunk));
+export default store;

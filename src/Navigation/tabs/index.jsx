@@ -6,18 +6,14 @@ import { theme } from '../../Constants';
 import EventsNavigator from '../Events';
 import FixtureNavigator from '../Fixture';
 import GoalsNavigator from '../GoalsNavigator';
-import OrdersNavigator from '../Orders';
-import CartNavigator from '../cart';
-import ShopNavigator from '../shop';
+import LeaguesNavigator from '../LeaguesNavigator';
 
 const BottomTab = createBottomTabNavigator();
 
 const TabNavigator = () => {
-  const cart = useSelector((state) => state.cart.data);
-  const isCartEmpty = cart.length === 0;
   return (
     <BottomTab.Navigator
-      initialRouteName="ShopTab"
+      initialRouteName="League"
       screenOptions={{
         headerShown: false,
         tabBarStyle: {
@@ -27,8 +23,8 @@ const TabNavigator = () => {
         },
       }}>
       <BottomTab.Screen
-        name="ShopTab"
-        component={ShopNavigator}
+        name="League"
+        component={LeaguesNavigator}
         options={{
           tabBarLabel: 'Campeonato',
           tabBarActiveTintColor: theme.colors.text,
@@ -68,9 +64,7 @@ const TabNavigator = () => {
           tabBarIcon: ({ focused, color, size }) => (
             <Ionicons name={focused ? 'newspaper' : 'newspaper-outline'} size={24} color="white" />
           ),
-          tabBarBadgeStyle: isCartEmpty
-            ? { backgroundColor: theme.colors.primary }
-            : { backgroundColor: theme.colors.red },
+          tabBarBadgeStyle: { backgroundColor: theme.colors.primary },
         }}
       />
     </BottomTab.Navigator>

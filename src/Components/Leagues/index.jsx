@@ -1,11 +1,12 @@
-import { View, FlatList, Text } from 'react-native';
+import React from 'react';
+import { Text, View } from 'react-native';
 
 import { styles } from './styles';
 
-const Leagues = ({ navigation }) => {
+const Leagues = () => {
   return (
     <View style={styles.container}>
-      <Text>dsadasd</Text>
+      <Text>Equipos</Text>
     </View>
   );
 };

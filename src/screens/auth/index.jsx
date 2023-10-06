@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import { styles } from './styles';
 import Input from '../../Components/input';
 import { theme } from '../../Constants/themes/colors';
-import { Register, signIn } from '../../store/actions/auth.actions';
+import { Register, signIn } from '../../store/authSlice';
 import { UPDATE_FORM, onInputChange } from '../../utils/form';
 
 const initialState = {

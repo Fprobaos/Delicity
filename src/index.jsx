@@ -3,7 +3,7 @@ import { View, ActivityIndicator } from 'react-native';
 import { Provider } from 'react-redux';
 
 import Navigator from './Navigation';
-import store from './store';
+import store from './store/index';
 import { styles } from './styles';
 
 export default function App() {
